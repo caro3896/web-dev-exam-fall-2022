@@ -27,6 +27,10 @@ h1, h2 {
     font-size: 1.3rem;
 }
 
+h3 {
+    text-align: center;
+}
+
 /* ######################################## */
 
 header {
@@ -43,6 +47,7 @@ header {
 #header_left{
     display: flex;
     align-items: center;
+    align-items: flex-start;
 }
 
 header img {
@@ -64,11 +69,24 @@ header a {
     padding: 0 1rem;
 }
 
+#header_right a svg {
+    width: 20px;
+    margin-right: 0.3rem;
+    fill: #9684a4;
+    vertical-align: bottom;
+}
+
+.special {
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+
 /* ######################################## */
 
 div#menu{
     position: fixed;
-    top: 3rem;
+    top: 3.5rem;
     left: -200vw;
     width: 100vw;
     height: 100vh;
@@ -83,11 +101,20 @@ div#menu.active{
 }
 
 div#menu a {
-    color: white;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
     line-height: 3rem;
+}
+
+.left_nav a{
+    color: white;
+    padding: 0 0.5rem;
+}
+
+.left_nav a svg {
+    width: 30px;
+    padding-right: 0.5rem;
+    fill: #9684a4;
 }
 
 #signup, #links, #explore {
@@ -99,6 +126,15 @@ div#menu a {
     padding: 0.5rem 0;
 }
 
+.focus {
+    background: white;
+    border-radius: 0.3rem;
+    color: #210340 !important;
+}
+
+a.focus svg{
+    fill: #210340 !important;
+}
 /* ######################################## */
 
 #form_container {
@@ -278,6 +314,7 @@ div#menu a {
     z-index: -2;
     transition: 0.5s ease-in-out;
     height: 100vh;
+    text-align: left;
 }
 
 #sign-in-modal.show {
@@ -307,6 +344,10 @@ div#menu a {
     position: absolute;
     top: 20;
     left: 0;
+}
+
+#sign-in-modal .sign-in-modal-bottom h3 {
+    text-align: left;
 }
 
 #sign-in-modal .sign-in-modal-bottom a{
@@ -367,10 +408,57 @@ div#menu a {
     display: none;
 }
 
+
+/* ######################################## */
+section {
+    padding: 1rem 2rem;;
+}
+
+#photo-upload{
+    background: white;
+    color: black;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+#photo-upload input[type=file] {
+    margin: 0.5rem 0;
+}
+
+#photo-upload input[type=submit] {
+    color: #fff;
+    background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
+    border: none;
+    /* font-weight: 700; */
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin: 0 auto;
+}
+
 /* ######################################## */
 
 footer {
-    height: 10rem;
     width: 100vw;
-    background: rgba(0, 0, 0, 0.8);
+    background: #130026;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 2rem;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer div h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+footer div a{
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    line-height: 1.5rem;
 }

@@ -5,8 +5,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^$                      view_index.php                  [NC,L]            
 RewriteRule ^signup$                view_signup.php                 [NC,L]
 ReWriteRule ^admin$                 view_admin.php                  [NC,L]
-RewriteRule ^admin/(\d+).php$       view_admin.php?id=$1
-ReWriteRule ^flights$               view_flights.php                [NC,L]
+# RewriteRule ^admin/(\d+).php$       view_admin.php?id=$1            [NC,L]
+# ReWriteRule ^flights$               view_flights.php                [NC,L]
 ReWriteRule ^stays$                 view_stays.php                  [NC,L]
 ReWriteRule ^cars$                  view_cars.php                   [NC,L]
 ReWriteRule ^campers$               view_campers.php                [NC,L]
@@ -21,7 +21,7 @@ ReWriteRule ^trips$                 view_view_trips.php             [NC,L]
 #RewriteRule ^search/(\w+)/(\w+)/(\d{1,2})/(\d{1,2})$    view_search.php?from=$1&to=$2&day=$3&month=$4   [NC,L]
 
 # Bridge
-RewriteRule ^logout$                bridge_logout.php               [NC,L]
+RewriteRule ^bridge-logout$         bridge-logout.php               [NC,L]
 RewriteRule ^bridge-login$          bridge_login.php                [NC,L]
 
 # API
@@ -29,7 +29,7 @@ RewriteRule ^api-get-cities-from$   api-get-cities-from.php         [NC,L]
 RewriteRule ^api-get-cities-to$     api-get-cities-to.php           [NC,L]
 RewriteRule ^api-signup$            api-sign-up.php                 [NC,L]
 RewriteRule ^api-search-flights$    api-search-flights.php          [NC,L]
-RewriteRule ^api-upload-photo$      api-upload-photo.php            $[NC,L]
+RewriteRule ^api-upload-photo$      api-upload-photo.php            [NC,L]
 
 # CSS
 RewriteRule ^mobile$                css_mobile.css                  [NC,L]
