@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mt1{ margin-top: 1rem;}
+.mt2{ margin-top: 2rem;}
+.mt3{ margin-top: 3rem;}
+
+body {
+    background:#210340;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+main{
+    padding: 1rem 2rem;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* ######################################## */
+
+header {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #210340;
+}
+
+#header_left{
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 30px;
+}
+
+header button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+/* ######################################## */
+
+div#menu{
+    position: fixed;
+    top: 3rem;
+    left: -200vw;
+    width: 100vw;
+    height: 100vh;
+    background:#210340;
+    z-index: 999;
+    transition: 0.2s linear;
+    padding: 2rem 1rem;
+}
+
+div#menu.active{
+    left: 0px;
+}
+
+div#menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
+}
+
+#signup, #links, #explore {
+    border-bottom: 1px solid rgba(167,98,234,0.4);
+    padding: 0.5rem 0;
+}
+
+#trips {
+    padding: 0.5rem 0;
+}
+
+/* ######################################## */
+
+#form_container {
+    background: #0096cc;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#search_flight #from-container #from-input,
+#search_flight #to-container #to-input {
+    border-radius: 0.3rem;
+    background-color: #f3f0f5;
+    border: 1px solid #f3f0f5;
+    padding: 0 2rem;
+    width: 100%;
+    background-image: url('/images/icons/airplane.svg');
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 0.5rem;
+    height: 3rem;
+}
+
+#search_flight input:focus{
+    outline: 2px solid rgba(167,98,234,0.4);
+}
+
+#search_flight button {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0 1rem;
+    background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+    padding: 20px;
+    color: white;
+    margin: 1rem auto;
+}
+
+#from-results, #to-results{
+    position: absolute;
+    background: #f3f0f5;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.3rem;
+    width: 80%;
+}
+
+#from-results .from-results-container,
+#to-results .to-results-container{
+    padding: 1rem;
+}
+
+#from-results .from-results-container,
+#to-results .to-results-container{
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.from-city-name,
+.to-city-name {
+    font-weight: 700;
+    color: black;
+}
+
+/* ######################################## */
+
+.flight {
+    width: 100%;
+    background: white;
+    color: grey;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.flight .from-flight-container p:first-of-type,
+.flight .to-flight-container p:first-of-type {
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* ######################################## */
+
+.option {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(167,98,234,0.4);
+    padding: 0.8rem 0;
+}
+
+#options:last-child{
+    border-bottom: 1px solid rgba(167,98,234,0.4);
+}
+
+.option .left {
+    width: 3rem;
+    font-size: 1.5rem;
+}
+
+.option .right .top {
+    font-weight: 700;
+}
+
+.option .right .bottom {
+    font-weight: 300;
+}
+
+/* ######################################## */
+
+/* .card {
+    margin: 1rem;
+    border: 1px solid rgba(167,98,234,0.4);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card p, .card h2{
+    text-align: left;
+    padding: 0 1rem;
+}
+.card button {
+    background: #6b15c1;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    margin: 1rem 0 1rem 1rem;
+} */
+
+/* ######################################## */
+#popular_cities h2+p {
+    text-align: center;
+}
+
+.popular_city {
+    background: white;
+    border-radius: 0.3rem;
+    margin: 1rem 1rem;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    color: black;
+}
+.popular_city_right {
+    padding: 0.8rem;
+}
+
+.popular_city_to {
+    font-weight: 200;
+    color: grey;
+}
+
+.popular_city img {
+    width: 100%;
+}
+
+/* ######################################## */
+
+#sign-in-modal {
+    background: #fff;
+    border-radius: 0.3rem;
+    color: black;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    visibility: hidden;
+    z-index: -2;
+    transition: 0.5s ease-in-out;
+    height: 100vh;
+}
+
+#sign-in-modal.show {
+    top: 0;
+    z-index: 10;
+    visibility: visible;
+}
+
+#sign-in-modal .sign-in-modal-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+#sign-in-modal .sign-in-modal-top img{
+    width: 40%;
+}
+
+#sign-in-modal .sign-in-modal-top button{
+    border: none;
+    background: none;
+}
+
+#sign-in-modal .sign-in-modal-bottom {
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 20;
+    left: 0;
+}
+
+#sign-in-modal .sign-in-modal-bottom a{
+    color:#73146f;
+}
+
+#sign-in-modal .sign-in-modal-bottom img {
+    width: 100%;
+}
+
+#sign-in-modal .sign-in-modal-bottom form{
+    display: flex;
+    flex-direction: column;
+}
+
+#sign-in-modal .sign-in-modal-bottom form div{
+    margin: 0.6rem 0;
+}
+
+#sign-in-modal .sign-in-modal-bottom form span{
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+#sign-in-modal .sign-in-modal-bottom form input{
+    border: 1px solid #ededed;
+    box-shadow: 0 3px 5px 0 #1b93c2;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 0.3rem;
+    margin: 0.3rem 0;
+}
+
+#sign-in-modal .sign-in-modal-bottom form input:focus{
+    border-bottom: 2px solid #2540a4;
+    outline: none;
+}
+
+#sign-in-modal .sign-in-modal-bottom .error{
+    visibility: hidden;
+    position: absolute;
+    color: rgb(129, 20, 20);
+}
+
+#sign-in-modal .sign-in-modal-bottom form button {
+    color: #fff;
+    background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.hide {
+    /* visibility: hidden; */
+    display: none;
+}
+
+/* ######################################## */
+
+footer {
+    height: 10rem;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8);
+}
