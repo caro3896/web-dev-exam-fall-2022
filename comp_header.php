@@ -121,7 +121,8 @@ session_start();
                         name="user_email"
                         placeholder="Email"
                         data-validate="email"
-                        onblur="validateEmail()">
+                        onblur="isEmailAvailable()"
+                        onfocus="clearInput()">
                     <span class="error">Email is already in use</span>
                 </div>
                 <div>

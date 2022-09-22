@@ -50,12 +50,18 @@ function validate(callback){
     document.querySelector(".validate_error", form).focus();
 }
 
-function validateEmail(){
-    // event.target.nextElementSibling.style.visibility = "hidden";
-    event.target.style.backgroundColor = "white";
-    if ( event.target.value == "a@a.com"){
-        console.log(event.target);
-        event.target.style.backgroundColor = "rgba(240, 130, 240, 0.2)";
-        event.target.nextElementSibling.style.visibility = "visible";
-    };
-}
+async function isEmailAvailable(){
+    const form = document.querySelector("#sign-up-form");
+    const connection = await fetch("api-is-email-available", {
+     method: "POST",
+     body: new FormData(form)
+    });
+ if ( ! connection.ok ) {
+     document.querySelector(".error").style.visibility = "visible";
+ };
+ };
+
+ function clearInput(){
+     event.target.value = "";
+     document.querySelector(".error").style.visibility = "hidden";
+ }
