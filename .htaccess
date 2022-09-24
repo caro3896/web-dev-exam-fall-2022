@@ -9,12 +9,10 @@ ReWriteRule ^admin$                     view_admin.php                  [NC,L]
 # ReWriteRule ^flights$                 view_flights.php                [NC,L]
 ReWriteRule ^stays$                     view_stays.php                  [NC,L]
 ReWriteRule ^cars$                      view_cars.php                   [NC,L]
-ReWriteRule ^campers$                   view_campers.php                [NC,L]
 ReWriteRule ^things_to_do$              view_things_to_do.php           [NC,L]
 ReWriteRule ^holidays$                  view_holidays.php               [NC,L]
-ReWriteRule ^trains_and_buses$          view_trains_and_buses.php       [NC,L]
 ReWriteRule ^explore$                   view_explore.php                [NC,L]
-ReWriteRule ^trips$                     view_view_trips.php             [NC,L]
+ReWriteRule ^trips$                     view_trips.php                  [NC,L]
 
 
 #RewriteRule ^search/(\w+)/(\w+)$       view_search.php?from=$1&to=$2   [NC,L]

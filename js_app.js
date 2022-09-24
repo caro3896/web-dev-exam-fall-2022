@@ -72,13 +72,18 @@ async function getCitiesFrom(){
 
   const originalFlightBlueprint = `
     <div class="from-results-container" onclick="selectFromCity()">
-      <p class="from-city-name">#from_city#</p>
-      <p>#from_airport#</p>
+      <img src="#from-city-image#" alt="">
+      <div>
+        <p class="from-city-name">#from_city#</p>
+        <p>#from_airport#</p>
+      </div>
     </div>`;
 
   flights.forEach( flight => {
       // console.log(flight);
       let divFlight = originalFlightBlueprint;
+      console.log(flight.from_city_img);
+      divFlight = divFlight.replace('#from-city-image#', `images/city_thumbnails/${flight.from_city_img}`);
       divFlight = divFlight.replace('#from_city#', flight.from_city_name);
       divFlight = divFlight.replace('#from_airport#', flight.from_city_airport_name);
       allFlights += divFlight;
@@ -88,7 +93,7 @@ async function getCitiesFrom(){
 }
 
 function selectFromCity(){
-  const fromCityName = event.target.innerText;
+  const fromCityName = event.target.querySelector(".from-city-name").innerText;
   document.querySelector("#from-input").value = fromCityName;
   document.querySelector("#from-results").style.display  = "none";
   document.querySelector("#from-results").innerHTML = "";
@@ -122,12 +127,16 @@ async function getCitiesTo(){
 
   const originalFlightBlueprint = `
     <div class="to-results-container" onclick="selectToCity()">
-      <p class="to-city-name">#to_city#</p>
-      <p>#to_airport#</p>
+      <img src="#to-city-image#" alt="">
+      <div>
+        <p class="to-city-name">#to_city#</p>
+        <p>#to_airport#</p>
+      </div>
     </div>
   `
   flights.forEach( flight => {
       let divFlight = originalFlightBlueprint;
+      divFlight = divFlight.replace('#to-city-image#', `images/city_thumbnails/${flight.to_city_img}`);
       divFlight = divFlight.replace('#to_city#', flight.to_city_name);
       divFlight = divFlight.replace('#to_airport#', flight.to_city_airport_name);
       allFlights += divFlight;
@@ -137,7 +146,7 @@ async function getCitiesTo(){
 }
 
 function selectToCity(){
-  const toCityName = event.target.innerText;
+  const toCityName = event.target.querySelector(".to-city-name").innerText;
   document.querySelector("#to-input").value = toCityName;
   document.querySelector("#to-results").style.display  = "none";
   document.querySelector("#to-results").innerHTML = "";
@@ -152,30 +161,49 @@ async function getFlights(){
   const toCitySearch = document.querySelector("#to-input").value;
   const connection = await fetch('api-search-flights?from_city_name='+fromCitySearch+'&to_city_name='+toCitySearch);
   const flights = await connection.json();
-  console.log(flights);
+  console.log(flights.length);
+
+  if ( flights.length == 0 ){
+    console.log("no flights");
+    const noFlights = `
+      <div class="no-flights">
+        <p>Sorry, no flights matches your search.</p>
+        <p>Please try again.</p>
+      </div>
+    `
+    document.querySelector("#flight-results").insertAdjacentHTML('afterbegin', noFlights);
+  }
 
   let allFlights = "";
 
   const originalFlightBlueprint = `
       <div class="flight">
           <div class="from-flight-container">
+            <img src="#from-city-image#" alt="">
+            <div>
               <p>#from_city#</p>
               <p>#from_city_airport#</p>
               <p>Departure: #departure_time#</p>
+            </div>
           </div>
           <div class="to-flight-container">
+            <img src="#to-city-image#" alt="">
+            <div>
               <p>#to_city#</p>
               <p>#to_city_airport#</p>
               <p>Arrival: #arrival_time#</p>
+            </div>
           </div>
       </div>
   `
   flights.forEach( flight => {
       console.log(flight);
       let divFlight = originalFlightBlueprint;
+      divFlight = divFlight.replace('#from-city-image#', `images/city_thumbnails/${flight.from_city_img}`);
       divFlight = divFlight.replace('#from_city#', flight.from_city_name);
       divFlight = divFlight.replace('#from_city_airport#', flight.from_city_airport_name);
       divFlight = divFlight.replace('#departure_time#', flight.departure_time);
+      divFlight = divFlight.replace('#to-city-image#', `images/city_thumbnails/${flight.to_city_img}`);
       divFlight = divFlight.replace('#to_city#', flight.to_city_name);
       divFlight = divFlight.replace('#to_city_airport#', flight.to_city_airport_name);
       divFlight = divFlight.replace('#arrival_time#', flight.arrival_time);

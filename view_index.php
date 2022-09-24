@@ -69,36 +69,38 @@ require_once __DIR__.'/comp_header.php';
 
     <div class="card mt2">
         <img src="images/travel.jpg" alt="">
-        <h2 class="mt1">Destinations you can travel to now</h2>
-        <p class="mt1">Popular destinations open to most visitors from Denmark</p>
-        <button>Read article</button>
+        <div>
+            <h2 class="mt1">Destinations you can travel to now</h2>
+            <p class="mt1">Popular destinations open to most visitors from Denmark</p>
+            <button>Read article</button>
+        </div>
     </div>
 
+    
+    <h2 class="mt2">Popular cities</h2>
+    <p style="text-align:center" class="mt1">Most searched cities on Momondo</p>
     <div id="popular_cities">
-        <h2 class="mt2">Popular cities</h2>
-        <p class="mt1">Most searched cities on Momondo</p>
-
         <div class="popular_city">
-            <img src="images/nice.jpg" alt="">
+            <img src="images/city_thumbnails/barcelona.jpg" alt="">
             <div class="popular_city_right">
                 <p class="popular_city_to">FLIGHT TO</p>
-                <p class="popular_city_name">Nice</p>
+                <p class="popular_city_name">Barcelona</p>
             </div>
         </div>
 
         <div class="popular_city">
-            <img src="images/nice.jpg" alt="">
+            <img src="images/city_thumbnails/london.jpg" alt="">
             <div class="popular_city_right">
                 <p class="popular_city_to">FLIGHT TO</p>
-                <p class="popular_city_name">Nice</p>
+                <p class="popular_city_name">London</p>
             </div>
         </div>
 
         <div class="popular_city">
-            <img src="images/nice.jpg" alt="">
+            <img src="images/city_thumbnails/newyork.jpg" alt="">
             <div class="popular_city_right">
                 <p class="popular_city_to">FLIGHT TO</p>
-                <p class="popular_city_name">Nice</p>
+                <p class="popular_city_name">New York</p>
             </div>
         </div>
 </div>

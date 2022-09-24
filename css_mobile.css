@@ -50,8 +50,12 @@ header {
     align-items: flex-start;
 }
 
-header img {
+#logo {
+    background-image: url("/images/small-logo.png");
     width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin-left: 1rem;
 }
 
 header button {
@@ -112,8 +116,8 @@ div#menu a {
 }
 
 .left_nav a svg {
-    width: 30px;
-    padding-right: 0.5rem;
+    width: 25px;
+    margin-right: 1.5rem;
     fill: #9684a4;
 }
 
@@ -166,16 +170,14 @@ a.focus svg{
 
 #search_flight button {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     padding: 0 1rem;
     background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
     border: none;
     border-radius: 50%;
-    text-align: center;
     width: 6rem;
     height: 6rem;
-    padding: 20px;
     color: white;
     margin: 1rem auto;
     cursor: pointer;
@@ -187,23 +189,47 @@ a.focus svg{
     color: rgba(0, 0, 0, 0.5);
     border-radius: 0.3rem;
     width: 80%;
-}
-
-#from-results .from-results-container,
-#to-results .to-results-container{
-    padding: 1rem;
+    margin-top: 0.3rem;
 }
 
 #from-results .from-results-container,
 #to-results .to-results-container{
     padding: 1rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#from-results .from-results-container img,
+#to-results .to-results-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.3rem;
+    object-fit: cover;
+}
+
+#from-results .from-results-container p,
+#to-results .to-results-container p {
+    pointer-events: none;
 }
 
 .from-city-name,
 .to-city-name {
     font-weight: 700;
     color: black;
+}
+
+.no-flights{
+    text-align: center;
+    color: black;
+    background: white;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.no-flights p:first-of-type{
+    font-weight: 700;
 }
 
 /* ######################################## */
@@ -214,10 +240,22 @@ a.focus svg{
     color: grey;
     border-radius: 0.3rem;
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     font-size: 0.9rem;
     line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.flight .from-flight-container,
+.flight .to-flight-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flight .from-flight-container{
+    margin-bottom: 1rem;
 }
 
 .flight .from-flight-container p:first-of-type,
@@ -225,6 +263,14 @@ a.focus svg{
     color: black;
     font-weight: 700;
     font-size: 1rem;
+}
+
+.flight img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    margin-right: 0.5rem;
 }
 
 /* ######################################## */
@@ -236,7 +282,7 @@ a.focus svg{
     padding: 0.8rem 0;
 }
 
-#options:last-child{
+#options .option:last-of-type{
     border-bottom: 1px solid rgba(167,98,234,0.4);
 }
 
@@ -257,6 +303,7 @@ a.focus svg{
 
 .card {
     border: 1px solid rgba(167,98,234,0.4);
+    cursor: pointer;
 }
 
 .card img {
@@ -285,9 +332,13 @@ a.focus svg{
     background: white;
     border-radius: 0.3rem;
     margin: 1rem 1rem;
-    display: grid;
-    grid-template-columns: 0.6fr 1fr;
+    display: flex;
+    align-items: center;
     color: black;
+    font-weight: 900;
+    cursor: pointer;
+    height: 7rem;
+    overflow: hidden;
 }
 .popular_city_right {
     padding: 0.8rem;
@@ -296,10 +347,14 @@ a.focus svg{
 .popular_city_to {
     font-weight: 200;
     color: grey;
+    font-size: 0.9rem;
 }
 
 .popular_city img {
-    width: 100%;
+    width: 45vw;
+    height: 7rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+    object-fit: cover;
 }
 
 /* ######################################## */
