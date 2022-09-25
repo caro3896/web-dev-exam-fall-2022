@@ -141,13 +141,38 @@ a.focus svg{
 }
 /* ######################################## */
 
-#form_container {
+#form_container,
+#stay {
     background: #0096cc;
     border-radius: 0.3rem;
     padding: 0.5rem;
     gap: 0.8rem;
     display: flex;
     flex-direction: column;
+}
+
+#stay input {
+    border-radius: 0.3rem;
+    background-color: #f3f0f5;
+    border: 1px solid #f6f6f6;
+    padding: 0 2rem;
+    width: 100%;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-size: 1.3em;
+    background-position: 0.5rem;
+}
+
+#country {
+    background-image: url('/images/icons/bed.svg');
+}
+
+#days {
+    background-image: url('/images/icons/days.svg');
+}
+
+#guests {
+    background-image: url('/images/icons/guests.svg');
 }
 
 #search_flight #from-container #from-input,
@@ -164,11 +189,13 @@ a.focus svg{
     height: 3rem;
 }
 
-#search_flight input:focus{
+#search_flight input:focus,
+#stay input:focus{
     outline: 2px solid rgba(167,98,234,0.4);
 }
 
-#search_flight button {
+#search_flight button,
+#stays button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,10 +331,13 @@ a.focus svg{
 .card {
     border: 1px solid rgba(167,98,234,0.4);
     cursor: pointer;
+    border-radius: 0.3rem;
 }
 
 .card img {
     width: 100%;
+    height: 15rem;
+    object-fit: cover;  
 }
 
 .card p, .card h2{
@@ -324,7 +354,7 @@ a.focus svg{
 }
 
 /* ######################################## */
-#popular_cities h2+p {
+.popular_cities h2+p {
     text-align: center;
 }
 

@@ -126,7 +126,7 @@ session_start();
         <div class="sign-in-modal-bottom sign-up hide">
             <img src="images/sign-in.png" alt="">
             <h3 class="mt1">Sign in or <em>create an account</em></h3>
-            <form id="sign-up-form" class="mt1" onsubmit="validate(signup); return false">
+            <form id="sign-up-form" class="mt1" onsubmit="validate(signUp); return false">
                 <div>
                     <label for="user name">User name</label>
                     <span>Min <?= _USER_NAME_MIN_LEN ?> and max <?= _USER_NAME_MAX_LEN ?> characters</span>

@@ -217,17 +217,27 @@ async function getFlights(){
 // Sign up
 
 async function signUp(){
+  console.log("signup");
   const theForm = document.querySelector("#sign-up-form");
   const connection = await fetch('api-signup', {
       method: "POST",
       body: new FormData(theForm)
     });
   if ( !connection.ok ){
-    console.log("error");
+    Swal.fire({
+      title: 'Signup unsuccesful!',
+      text: 'Please try again',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    })
   }
-  else {
-    console.log("Success");
-  }
+  const data = await connection.json();
+    Swal.fire({
+      title: 'Welcome ' + data.user_name,
+      text: 'Your signup was successful',
+      icon: 'success',
+      confirmButtonText: '<a href="/">Ok</a>'
+    })
 }
 
 // ####################################
@@ -257,7 +267,17 @@ async function uploadImage(){
       body: new FormData(form)
   });
   if ( ! connection.ok ) {
-    console.log("error");
+    Swal.fire({
+      title: 'Upload unsuccesful!',
+      text: 'Please try again',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    })
   };
-  console.log("succes");
+  Swal.fire({
+    title: 'Upload succesful!',
+    text: 'Image was succesfully uploaded',
+    icon: 'success',
+    confirmButtonText: '<a href="admin">Cool</a>'
+  })
 };

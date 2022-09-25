@@ -79,7 +79,7 @@ require_once __DIR__.'/comp_header.php';
     
     <h2 class="mt2">Popular cities</h2>
     <p style="text-align:center" class="mt1">Most searched cities on Momondo</p>
-    <div id="popular_cities">
+    <div class="popular_cities">
         <div class="popular_city">
             <img src="images/city_thumbnails/barcelona.jpg" alt="">
             <div class="popular_city_right">

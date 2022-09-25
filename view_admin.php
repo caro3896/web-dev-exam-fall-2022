@@ -15,7 +15,7 @@ try{
 ?>
 
 <section>
-    <h2 class="mt1">Welcome, <?= $_SESSION['user_first_name'] ?>!</h2>
+    <h2 class="mt1">Welcome, <?= $_SESSION['user_name'] ?>!</h2>
 
     <h3 class="mt1">Manage flights</h3>
     <div class="mt1">

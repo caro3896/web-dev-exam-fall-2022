@@ -1,6 +1,7 @@
 function validate(callback){
     console.log("Validating");
     const form = event.target;
+    console.log(form);
     const validate_error = "rgba(240, 130, 240, 0.2)";
 
     document.querySelectorAll("[data-validate]",form).forEach(function(element){ 
@@ -46,7 +47,10 @@ function validate(callback){
                 };
         }
     })
-    if( ! document.querySelector(".validate_error", form) ){ callback(); return }
+    if( ! form.classList.contains("validate_eeror") ){ 
+        callback(); 
+        return 
+    }
     document.querySelector(".validate_error", form).focus();
 }
 
@@ -74,12 +78,6 @@ async function isEmailAvailable(){
             // document.querySelector('#fileToUpload').value = '';
             return;
         }
-    Swal.fire({
-        title: 'Upload succesful!',
-        text: 'Do you want to continue',
-        icon: 'success',
-        confirmButtonText: 'Cool'
-    })
     callback();
     return;
  };
