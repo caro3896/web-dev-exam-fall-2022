@@ -229,3 +229,19 @@ async function signUp(){
     console.log("Success");
   }
 }
+
+// ####################################
+// Delete flight
+async function deleteFlight(flight){
+  form = event.target.form;
+  const connection = await fetch('api-delete-flight.php', {
+      method: "POST",
+      body : new FormData(form)
+  });
+  const data = await connection.json();
+  if ( ! connection.ok ){
+      console.log(data);
+      return;
+  };
+  form.parentElement.remove();
+};
