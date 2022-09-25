@@ -142,7 +142,8 @@ a.focus svg{
 /* ######################################## */
 
 #form_container,
-#stay {
+#stay,
+#car {
     background: #0096cc;
     border-radius: 0.3rem;
     padding: 0.5rem;
@@ -151,7 +152,8 @@ a.focus svg{
     flex-direction: column;
 }
 
-#stay input {
+#stay input,
+#car input {
     border-radius: 0.3rem;
     background-color: #f3f0f5;
     border: 1px solid #f6f6f6;
@@ -163,15 +165,19 @@ a.focus svg{
     background-position: 0.5rem;
 }
 
-#country {
+.country_car {
+    background-image: url('/images/icons/car.svg');
+}
+
+.country_stay {
     background-image: url('/images/icons/bed.svg');
 }
 
-#days {
+.days {
     background-image: url('/images/icons/days.svg');
 }
 
-#guests {
+.guests {
     background-image: url('/images/icons/guests.svg');
 }
 
@@ -190,12 +196,14 @@ a.focus svg{
 }
 
 #search_flight input:focus,
-#stay input:focus{
+#stay input:focus,
+#car input:focus{
     outline: 2px solid rgba(167,98,234,0.4);
 }
 
 #search_flight button,
-#stays button {
+#stays button,
+#cars button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,6 +359,55 @@ a.focus svg{
     color: white;
     margin: 1rem 0 1rem 1rem;
     padding: 0.5rem;
+}
+
+/* ######################################## */
+
+.ad {
+    border: 1px solid rgba(167,98,234,0.4);
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+
+.ad img {
+    width: 110px;
+}
+
+.ad div {
+    padding: 0.5rem 0;
+}
+
+.ad span {
+    font-weight: 700;
+}
+
+/* ######################################## */
+
+.card2 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.card2 h2 {
+    text-align: left;
+    margin: 0;
+}
+
+.card2 button {
+    height: fit-content;
+    margin: auto;   
+    padding: 0.5rem;
+    color: #130026;
+    background: white;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 /* ######################################## */

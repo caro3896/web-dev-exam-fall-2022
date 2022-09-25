@@ -8,9 +8,10 @@ require_once __DIR__.'/comp_header.php';
 
     <form id="stays" class="mt2" onsubmit="return false">
         <div id="stay">
-                <input id="country" type="text" placeholder="Where">
-                <input id="days" type="text" placeholder="Days">
-                <input id="guests" type="number" placeholder="Guests">
+                <input class="country_stay" type="text" placeholder="Where">
+                <input class="days" type="date" value="2023-07-22">
+                <input class="days" type="date" value="2023-08-08">
+                <input class="guests" type="number" placeholder="Guests">
         </div>
         <button><?= $dictionary[$lang.'_search']?></button>
     </form>
@@ -48,6 +49,31 @@ require_once __DIR__.'/comp_header.php';
             <div class="popular_city_right">
                 <p class="popular_city_to">HOTELS IN</p>
                 <p class="popular_city_name">New York</p>
+            </div>
+        </div>
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/oslo.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">HOTELS IN</p>
+                <p class="popular_city_name">Oslo</p>
+            </div>
+        </div>
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/paris.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">HOTELS IN</p>
+                <p class="popular_city_name">Paris</p>
+            </div>
+        </div>
+
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/stockholm.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">HOTELS IN</p>
+                <p class="popular_city_name">Stockholm</p>
             </div>
         </div>
 </main>

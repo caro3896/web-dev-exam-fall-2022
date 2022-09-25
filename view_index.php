@@ -103,6 +103,31 @@ require_once __DIR__.'/comp_header.php';
                 <p class="popular_city_name">New York</p>
             </div>
         </div>
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/oslo.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">FLIGHT TO</p>
+                <p class="popular_city_name">Oslo</p>
+            </div>
+        </div>
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/paris.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">FLIGHT TO</p>
+                <p class="popular_city_name">Paris</p>
+            </div>
+        </div>
+
+
+        <div class="popular_city">
+            <img src="images/city_thumbnails/stockholm.jpg" alt="">
+            <div class="popular_city_right">
+                <p class="popular_city_to">FLIGHT TO</p>
+                <p class="popular_city_name">Stockholm</p>
+            </div>
+        </div>
 </div>
     
 </main>
