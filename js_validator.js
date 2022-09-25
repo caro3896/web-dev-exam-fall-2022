@@ -53,15 +53,42 @@ function validate(callback){
 async function isEmailAvailable(){
     const form = document.querySelector("#sign-up-form");
     const connection = await fetch("api-is-email-available", {
-     method: "POST",
-     body: new FormData(form)
+        method: "POST",
+        body: new FormData(form)
     });
- if ( ! connection.ok ) {
-     document.querySelector(".error").style.visibility = "visible";
- };
+    if ( ! connection.ok ) {
+        document.querySelector(".error").style.visibility = "visible";
+    };
  };
 
  function clearInput(){
      event.target.value = "";
      document.querySelector(".error").style.visibility = "hidden";
  }
+
+ function validateImage(callback){
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+        if(!allowedExtensions.exec(document.querySelector('#fileToUpload').value)){
+            // alert('Please upload file having extensions .jpeg/.jpg/.png only.');
+            document.querySelector(".image-error").style.visibility = "visible";
+            // document.querySelector('#fileToUpload').value = '';
+            return;
+        }
+    Swal.fire({
+        title: 'Upload succesful!',
+        text: 'Do you want to continue',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+    })
+    callback();
+    return;
+ };
+
+ function clearImageInput(){
+    document.querySelector(".image-error").style.visibility = "hidden";
+}
+
+
+
+ 
+ 

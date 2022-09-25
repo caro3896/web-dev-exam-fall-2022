@@ -245,3 +245,19 @@ async function deleteFlight(flight){
   };
   form.parentElement.remove();
 };
+
+// ####################################
+// Upload image
+async function uploadImage(){
+  const form = document.querySelector("#upload-image");
+  // console.log(document.querySelector("#fileToUpload"));
+  // document.querySelector("#fileToUpload").value = '';
+  const connection = await fetch("api-upload-photo", {
+      method: "POST",
+      body: new FormData(form)
+  });
+  if ( ! connection.ok ) {
+    console.log("error");
+  };
+  console.log("succes");
+};

@@ -61,10 +61,11 @@ try{
 
     <h3 class="mt1">Upload photo</h3>
     <div class ="mt1" id="photo-upload">
-        <form action="api-upload-photo" method="post" enctype="multipart/form-data">
+        <form id="upload-image" enctype="multipart/form-data" onsubmit="validateImage(uploadImage); return false" >
             <Label for="fileToUpload">Select image to upload</Label>
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload image" name="submit">
+            <input type="file" name="fileToUpload" id="fileToUpload" onchange="clearImageInput()">
+            <input  type="submit" value="Upload image" name="submit">
+            <p class="image-error">Image not allowed</p>
         </form>
     </div>
 </section>
