@@ -10,7 +10,7 @@ try{
     // Connection to the database (put in a variable)
     $db = new PDO('sqlite:'.__DIR__.'/momondo.db');
     // Searches for the flight
-    $q = $db->prepare('SELECT * FROM flights WHERE to_city_name LIKE :to_city');
+    $q = $db->prepare('SELECT DISTINCT to_city_name, to_city_airport_name, to_city_img FROM flights WHERE to_city_name LIKE :to_city');
     $q->bindValue(':to_city', '%'.$to_city.'%');
     // Run the previous statements
     $q->execute();
