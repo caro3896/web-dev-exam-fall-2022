@@ -4,7 +4,7 @@ require_once __DIR__.'/comp_header.php';
 ?>
 
 <main>
-    <h2>Book a stay with free cancellation - search now.</h2>
+    <h1>Book a stay with free cancellation - search now.</h1>
 
     <form id="stays" class="mt2" onsubmit="return false">
         <div id="stay">

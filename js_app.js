@@ -177,36 +177,38 @@ async function getFlights(){
   let allFlights = "";
 
   const originalFlightBlueprint = `
-      <div class="flight">
-          <div class="from-flight-container">
-            <img src="#from-city-image#" alt="">
-            <div>
-              <p>#from_city#</p>
-              <p>#from_city_airport#</p>
-              <p>Departure: #departure_time#</p>
-            </div>
-          </div>
-          <div class="to-flight-container">
-            <img src="#to-city-image#" alt="">
-            <div>
-              <p>#to_city#</p>
-              <p>#to_city_airport#</p>
-              <p>Arrival: #arrival_time#</p>
-            </div>
-          </div>
+    <div class="flight">
+      <div class="company">
+        <img src="#fligth-company#" alt="">
       </div>
+      <div class="departure">
+        <p class="time">#departure_time#</p>
+        <p class="airport">#departure_airport#</p>
+      </div>
+      <div class="duration">
+        <p class="stops">#stops#</p>
+        <p class="flight-time">#duration#</p>
+      </div>
+      <div class="arrival">
+        <p class="time">#arrival_time#</p>
+        <p class="airport">#arrival_airport#</p>
+      </div>
+      <div class="price">
+        <p>€ #price#</p>
+      </div>
+    </div>
   `
   flights.forEach( flight => {
       console.log(flight);
       let divFlight = originalFlightBlueprint;
-      divFlight = divFlight.replace('#from-city-image#', `images/city_thumbnails/${flight.from_city_img}`);
-      divFlight = divFlight.replace('#from_city#', flight.from_city_name);
-      divFlight = divFlight.replace('#from_city_airport#', flight.from_city_airport_name);
+      divFlight = divFlight.replace('#fligth-company#', `images/${flight.airline}.png`);
+      divFlight = divFlight.replace('#departure_airport#', flight.from_city_airport_short);
       divFlight = divFlight.replace('#departure_time#', flight.departure_time);
-      divFlight = divFlight.replace('#to-city-image#', `images/city_thumbnails/${flight.to_city_img}`);
-      divFlight = divFlight.replace('#to_city#', flight.to_city_name);
-      divFlight = divFlight.replace('#to_city_airport#', flight.to_city_airport_name);
+      divFlight = divFlight.replace('#stops#', flight.stops);
+      divFlight = divFlight.replace('#duration#', flight.flight_time);
+      divFlight = divFlight.replace('#arrival_airport#', flight.to_city_airport_short);
       divFlight = divFlight.replace('#arrival_time#', flight.arrival_time);
+      divFlight = divFlight.replace('#price#', flight.price);
       allFlights += divFlight;
   });
 

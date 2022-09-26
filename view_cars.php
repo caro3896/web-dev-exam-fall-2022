@@ -4,7 +4,7 @@ require_once __DIR__.'/comp_header.php';
 ?>
 
 <main>
-    <h2>Hire a car with free cancellation - search now. </h2>
+    <h1>Hire a car with free cancellation - search now. </h1>
 
     <form id="cars" class="mt2" onsubmit="return false">
         <div id="car">

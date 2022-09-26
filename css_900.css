@@ -53,21 +53,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 2rem;
     }
 
     #form_container,
     #stay,
     #car
     {
-        max-width: 70vw;
+        /* max-width: 70vw; */
         flex-direction: row;
-        height: fit-content;
+        /* height: fit-content; */
     }
 
-    #from-container,
+    /* #from-container,
     #to-container {
         height: fit-content;
-    }
+    } */
 
     #search_flight button{
         margin: 0 2rem;
@@ -92,14 +93,19 @@
         margin-top: 2rem;
     }
 
-    .flight{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    #options {
+        display: flex;
+        gap: 1.5rem;          
     }
 
-    #options {
-        max-width: 800px;
-        margin: 1rem auto;          
+    .option {
+        border: 1px solid rgba(167,98,234,0.4);
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .option .left {
+        margin-right: 1rem;
     }
 
     .card {

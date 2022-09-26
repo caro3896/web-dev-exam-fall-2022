@@ -30,4 +30,8 @@
         right: 0;
     }
     
+    #footer-container {
+        max-width: 80vw;
+        margin: 0 auto;
+    }
 }
