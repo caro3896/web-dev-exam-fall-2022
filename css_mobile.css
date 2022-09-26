@@ -13,7 +13,7 @@
 body {
     background:#210340;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     overflow-x: hidden;
     color: white;
 }
@@ -62,7 +62,7 @@ header button {
     border: none;
     background: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     padding-left: 1rem;
 }
@@ -93,7 +93,7 @@ div#menu{
     top: 3.5rem;
     left: -200vw;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     background:#210340;
     z-index: 999;
     transition: 0.2s linear;
@@ -468,8 +468,8 @@ a.focus svg{
     position: absolute;
     top: 100vh;
     left: 0;
-    visibility: hidden;
-    z-index: -2;
+    display: none;
+    z-index: 10;
     transition: 0.5s ease-in-out;
     height: 100vh;
     text-align: left;
@@ -478,7 +478,7 @@ a.focus svg{
 #sign-in-modal.show {
     top: 0;
     z-index: 10;
-    visibility: visible;
+    display: block;
 }
 
 #sign-in-modal .sign-in-modal-top {

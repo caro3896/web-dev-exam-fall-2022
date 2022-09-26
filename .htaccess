@@ -2,7 +2,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 
 # View
-RewriteRule ^$                          view_index.php                  [NC,L]            
+RewriteRule ^$                          view_index.php                  [NC,L]
+RewriteRule ^login                      /?show_login_modal=yes.php      [NC,L]            
 RewriteRule ^signup$                    view_signup.php                 [NC,L]
 ReWriteRule ^admin$                     view_admin.php                  [NC,L]
 # RewriteRule ^admin/(\d+).php$         view_admin.php?id=$1            [NC,L]
@@ -20,7 +21,7 @@ ReWriteRule ^trips$                     view_trips.php                  [NC,L]
 
 # Bridge
 RewriteRule ^bridge-logout$             bridge-logout.php               [NC,L]
-RewriteRule ^bridge-login$              bridge_login.php                [NC,L]
+RewriteRule ^bridge-login$              bridge-login.php                [NC,L]
 
 # API
 RewriteRule ^api-get-cities-from$       api-get-cities-from.php         [NC,L]
@@ -28,7 +29,10 @@ RewriteRule ^api-get-cities-to$         api-get-cities-to.php           [NC,L]
 RewriteRule ^api-signup$                api-sign-up.php                 [NC,L]
 RewriteRule ^api-search-flights$        api-search-flights.php          [NC,L]
 RewriteRule ^api-upload-photo$          api-upload-photo.php            [NC,L]
+RewriteRule ^api-delete-flight$         api-delete-flight.php           [NC,L]
 RewriteRule ^api-is-email-available$    api-is-email-available.php      [NC,L]
+RewriteRule ^api-is-user-correct$       api-is-user-correct.php         [NC,L]
+
 
 # CSS
 RewriteRule ^mobile$                    css_mobile.css                  [NC,L]

@@ -115,7 +115,7 @@ session_start();
         </nav>
     </div>
 
-    <div id="sign-in-modal">
+    <div <?php if($_GET['show_login_modal']){echo 'class="show"';} ?> id="sign-in-modal">
         <div class="sign-in-modal-top">
             <img src="images/logo.png" alt="">
             <button onclick="toggleSignIn()">X</button>
@@ -123,7 +123,7 @@ session_start();
         <div class="sign-in-modal-bottom sign-in">
             <img src="images/sign-in.png" alt="">
             <h3 class="mt1"><em>Sign in</em> or create an account</h3>
-            <form action="bridge-login.php" method="POST" class="mt1">
+            <form method="POST" action="bridge-login" class="mt1">
                 <div>
                     <label for="email">Email</label>
                     <input 
@@ -141,6 +141,7 @@ session_start();
                         data-validate="str">
                 </div>
                 <button class="mt1">Sign in</button>
+                <p class="error">Incorrect email or password</p>
                 <p class="mt1">Don't have an account yet? <a href="#" onclick="toggleSignUp()">Sign up!</a></p>
             </form>
         </div>

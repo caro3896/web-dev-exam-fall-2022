@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1);
+// ini_set('display_errors',1);
 
 define('_USER_NAME_MIN_LEN', 2);
 define('_USER_NAME_MAX_LEN', 15);

@@ -85,8 +85,4 @@ async function isEmailAvailable(){
  function clearImageInput(){
     document.querySelector(".image-error").style.visibility = "hidden";
 }
-
-
-
- 
  

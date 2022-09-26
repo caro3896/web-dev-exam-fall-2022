@@ -244,7 +244,7 @@ async function signUp(){
 // Delete flight
 async function deleteFlight(flight){
   form = event.target.form;
-  const connection = await fetch('api-delete-flight.php', {
+  const connection = await fetch('api-delete-flight', {
       method: "POST",
       body : new FormData(form)
   });
