@@ -15,7 +15,11 @@
         right: 0;
         width: 80vw;
         margin: 0 auto;
-        height: 950px;
+        height: 900px;
+    }
+
+    .sign-in-modal-bottom img{
+        height: 15rem;
     }
 
     #sign-in-modal.show{
