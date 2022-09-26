@@ -25,5 +25,5 @@ if( $_correct_password != $_POST['password'] ){
 }
 
 session_start();
-$_SESSION['user_first_name'] = 'Caroline';
+$_SESSION['user_name'] = 'Caroline';
 header("Location: admin");

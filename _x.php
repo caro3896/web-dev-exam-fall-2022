@@ -67,6 +67,10 @@ function _validate_user_password_confirm(){
 
 // ##############################
 function _validate_image_upload(){
+    $error_message = 'fileToUpload missing or invalid';
+    if ( ! isset($_FILES['fileToUpload']) ){
+        _respond($error_message, 400); 
+    };
     if($_FILES['fileToUpload']['error'] === UPLOAD_ERR_INI_SIZE) {
         _respond('item_image too large', 400);
     }
