@@ -52,7 +52,7 @@
                         data-validate="email"
                         onblur="isEmailAvailable()"
                         onfocus="clearInput()">
-                    <span class="error">Email is already in use</span>
+                    <span id="email-error" class="error">Email is already in use</span>
                 </div>
                 <div>
                     <label for="user password">Password</label>

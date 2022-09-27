@@ -47,19 +47,22 @@ function validate(callback) {
   }
   
 async function isEmailAvailable(){
+    console.log("Checking email");
     const form = document.querySelector("#sign-up-form");
     const connection = await fetch("api-is-email-available", {
         method: "POST",
         body: new FormData(form)
     });
     if ( ! connection.ok ) {
-        document.querySelector(".error").style.visibility = "visible";
+        document.querySelector("#email-error").style.visibility = "visible";
+        document.querySelector("input[name='user_email']").style.backgroundColor = "rgba(240, 130, 240, 0.2)";
     };
  };
 
  function clearInput(){
      event.target.value = "";
-     document.querySelector(".error").style.visibility = "hidden";
+     document.querySelector("#email-error").style.visibility = "hidden";
+     document.querySelector("input[name='user_email']").style.backgroundColor = "white";
  }
 
  function validateImage(callback){
