@@ -116,6 +116,22 @@
         margin-top: 2rem;
     }
 
+    .flight img {
+        width: 80px;
+    }
+
+    .flight .airport {
+        font-size: 1.1rem;
+    }
+    
+    .flight .time {
+        font-size: 1rem;
+    }
+    
+    .price p {
+        font-size: 1.2rem;
+    }
+
     #options {
         display: flex;
         gap: 1.5rem;          
@@ -170,12 +186,12 @@
         width: 10vw;
     }
 
-    .departure div,
-    .arrival div {
+    .all-flights .departure div,
+    .all-flights .arrival div {
         margin: auto 0;
     }
 
-    .departure {
+    .all-flights .departure {
         border-right: 1px solid gray;
         margin-right: 1rem;
     }
