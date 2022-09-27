@@ -76,6 +76,10 @@ header a {
     padding: 0 1rem;
 }
 
+header a:hover {
+    color: #f57318;
+}
+
 #header_right a svg {
     width: 20px;
     margin-right: 0.3rem;
@@ -87,6 +91,11 @@ header a {
     border: 1px solid white;
     border-radius: 0.3rem;
     padding: 0.5rem;
+}
+
+.special:hover {
+    background: white;
+    color: #210340;
 }
 
 /* ######################################## */
@@ -116,6 +125,17 @@ div#menu a {
 .left_nav a{
     color: white;
     padding: 0 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.left_nav a:hover{
+    color:#130026;
+    background-color: white;
+    padding: 0 0.5rem;
+}
+
+.left_nav a:hover svg {
+    fill: #130026;
 }
 
 .left_nav a svg {
@@ -445,13 +465,20 @@ a.focus svg{
     font-size: 0.8rem;
     font-weight: 700;
 }
+.card2-bottom-container {
+    /* width: 85vw; */
+    overflow-x: scroll;
+    display: flex;
+    gap: 2rem;
+}
+
 .card2-bottom {
     position: relative;
     line-height: 1.5rem;
 }
 
 .card2-bottom img{
-    width: 100%;
+    width: 84vw;
     height: 10rem;
     object-fit: cover;
     border-radius: 0.5rem;
@@ -481,6 +508,29 @@ a.focus svg{
 .card3 {
     display: flex;
     gap: 1rem;
+    overflow-x: scroll;
+}
+
+.card3-bottom img{
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.card3-bottom .next {
+    /* background: url("images/icons/next.svg"); */
+    background: white;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.3rem;
+    position: absolute;
+    right: 2.5rem;
+    bottom: -5rem;
 }
 /* ######################################## */
 .popular_cities h2+p {

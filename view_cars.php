@@ -33,11 +33,28 @@ require_once __DIR__.'/comp_header.php';
             </div>
             <button>More inspiration</button>
         </div>
-        <div class="card2-bottom mt1">
-            <img src="/images/corona.jpg" alt="">
+        <div class="card2-bottom-container">
+            <div class="card2-bottom mt1">
             <div class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="JRE_-arrow-svg" role="img" cleanup=""><path d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg></div>
-            <h5>Coronavirus update: What do the US travel restrictions mean for me?</h5>
-            <p>May 6, 2020 - 3 min</p>
+                <img src="/images/corona.jpg" alt="">
+                <h5>Coronavirus update: What do the US travel restrictions mean for me?</h5>
+                <p>May 6, 2020 - 3 min</p>
+            </div>
+            <div class="card2-bottom mt1">
+                <img src="/images/corona2.jpg" alt="">
+                <h5>What to know about coronavirus (COVID-19) and travel</h5>
+                <p>Jan 7, 2021 - 2 min</p>
+            </div>
+            <div class="card2-bottom mt1">
+                <img src="/images/temple.jpg" alt="">
+                <h5>10 sustainable destinations to put on your bucket list</h5>
+                <p>May 6, 2020 - 10 min</p>
+            </div>
+            <div class="card2-bottom mt1">
+                <img src="/images/ecotravel.jpg" alt="">
+                <h5>10 eco travel trends to look out for</h5>
+                <p>Feb 16, 2022 - 8 min</p>
+            </div>
         </div>
     </div>
 

@@ -65,6 +65,23 @@
         /* height: fit-content; */
     }
 
+    #car {
+        width: 1000px ;
+    }
+
+    #things {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #things button {
+        margin: 0;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     /* #from-container,
     #to-container {
         height: fit-content;
@@ -121,6 +138,21 @@
         background: #210340;
         margin: 2rem;
         border-radius: 0.3rem;
+    }
+
+    .card2-bottom img{
+        height: 15rem;
+        width: 250px;
+    }
+
+    .card3-bottom img{
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .card2-bottom .next,
+    .card3-bottom .next{
+        display: none;
     }
 
     .popular_cities{

@@ -29,6 +29,15 @@
     #sign-in-modal .sign-in-modal-bottom{
         right: 0;
     }
+
+    .card2-bottom img{
+        height: 13rem;
+        width: 76vw;
+    }
+
+    .card2-bottom .next{
+        top: 5.5rem
+    }
     
     #footer-container {
         max-width: 80vw;

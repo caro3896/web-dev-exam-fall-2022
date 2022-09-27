@@ -87,7 +87,7 @@ session_start();
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="ui-layout-VerticalIcon hsCY-menu-item-icon hsCY-hotels" role="presentation" aria-hidden="true" aria-label="Hotels icon" cleanup=""><path d="M175 170a5 5 0 0 1-5-5v-5H30v5a5 5 0 1 1-10 0v-43.092c0-8.176 3.859-15.462 10-20.027V65c0-13.785 11.215-25 25-25h90c13.785 0 25 11.215 25 25v36.98c6.093 4.613 10 11.922 10 19.928V165a5 5 0 0 1-5 5zM30 150h140v-10H30v10zm0-20h140v-8.092c0-7.342-5.486-13.707-12.762-14.806c-40.216-6.077-73.399-6.207-114.477 0C35.415 108.21 30 114.4 30 121.908V130zm120-34.027c2.877.382 9.581 1.381 10 1.467V65c0-8.271-6.729-15-15-15H55c-8.271 0-15 6.729-15 15v32.438c.418-.084 7.123-1.083 10-1.465V85c0-8.271 6.729-15 15-15h25a14.94 14.94 0 0 1 10 3.829A14.943 14.943 0 0 1 110 70h25c8.271 0 15 6.729 15 15v10.973zm-45-3.45c11.463.167 22.988.912 35 2.233V85c0-2.757-2.243-5-5-5h-25c-2.757 0-5 2.243-5 5v7.523zM65 80c-2.757 0-5 2.243-5 5v9.756c12.012-1.321 23.537-2.065 35-2.232V85c0-2.757-2.243-5-5-5H65z"></path></svg>
                     <span><?= $dictionary[$lang.'_stays']?></span>
                 </a>
-                <a href="cars" <?= $_title == 'Car Rental' ? 'class="focus"' : '' ?> >
+                <a href="cars" <?= $_title == 'Car Hire' ? 'class="focus"' : '' ?> >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="ui-layout-VerticalIcon hsCY-menu-item-icon hsCY-cars" role="presentation" aria-hidden="true" aria-label="Cars icon" cleanup=""><path d="M165 160h-10c-7.2 0-13.2-5.1-14.7-11.9c-26.8 2.5-53.9 2.5-80.6 0c-1.5 6.8-7.5 11.9-14.7 11.9H35c-8.3 0-15-6.7-15-15v-43.7c-2.1-.5-4.2-1-6.2-1.5c-2.7-.7-4.3-3.4-3.6-6.1c.7-2.7 3.4-4.3 6.1-3.6c1.6.4 3.2.8 4.7 1.1l12.4-37.7C34.9 49 39.2 45 44.7 44c30-5.3 80.7-5.3 110.6 0c5.5 1 9.8 4.9 11.4 9.7L179 91.4c1.6-.4 3.1-.8 4.7-1.2c2.7-.7 5.4.9 6.1 3.6c.7 2.7-.9 5.4-3.6 6.1c-2.1.5-4.2 1.1-6.3 1.6v43.6c.1 8.2-6.6 14.9-14.9 14.9zm-15-17.4v2.4c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-19.2c-11 1.6-26.2 3.5-34.6 4.2c-2.8.2-5.2-1.8-5.4-4.6c-.2-2.8 1.8-5.2 4.6-5.4c8.4-.7 24.6-2.8 35.4-4.3v-12.1c-43.8 8.7-94.9 8.7-140-.1v12.2c10.8 1.6 27 3.7 35.4 4.3c2.8.2 4.8 2.6 4.6 5.4c-.2 2.8-2.6 4.8-5.4 4.6c-8.4-.7-23.6-2.6-34.6-4.2V145c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5v-2.4c0-2.9 2.5-5.3 5.5-5c29.5 3.2 59.4 3.2 88.9 0c3.1-.3 5.6 2.1 5.6 5zM30.8 93.4c44.6 8.9 95.3 8.9 138.5.1l-12-36.7c-.6-1.6-2-2.7-3.6-3c-29-5.1-78.1-5.1-107.2 0c-1.7.3-3.1 1.4-3.6 3L30.8 93.4zm74.4-4c-2.4-1.4-3.2-4.4-1.9-6.8C107.7 74.8 116 70 125 70s17.1 4.7 21.6 12.5c1.4 2.4.6 5.4-1.8 6.8c-2.4 1.4-5.4.6-6.8-1.8c-2.7-4.7-7.6-7.5-13-7.5s-10.3 2.9-12.9 7.5c-1.4 2.4-4.5 3.2-6.9 1.9z"></path></svg>
                     <span><?= $dictionary[$lang.'_cars']?></span>
                 </a>
@@ -114,81 +114,7 @@ session_start();
             </div>
         </nav>
     </div>
-
-    <div <?php if($_GET['show_login_modal']){echo 'class="show"';} ?> id="sign-in-modal">
-        <div class="sign-in-modal-top">
-            <img src="images/logo.png" alt="">
-            <button onclick="toggleSignIn()">X</button>
-        </div>
-        <div class="sign-in-modal-bottom sign-in">
-            <img src="images/sign-in.png" alt="">
-            <h3 class="mt1"><em>Sign in</em> or create an account</h3>
-            <form method="POST" action="bridge-login" class="mt1">
-                <div>
-                    <label for="email">Email</label>
-                    <input 
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        data-validate="email">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input 
-                        type="password"
-                        name="password"
-                        placeholder="Password"
-                        data-validate="str">
-                </div>
-                <button class="mt1">Sign in</button>
-                <p class="error">Incorrect email or password</p>
-                <p class="mt1">Don't have an account yet? <a href="#" onclick="toggleSignUp()">Sign up!</a></p>
-            </form>
-        </div>
-        <div class="sign-in-modal-bottom sign-up hide">
-            <img src="images/sign-in.png" alt="">
-            <h3 class="mt1">Sign in or <em>create an account</em></h3>
-            <form id="sign-up-form" class="mt1" onsubmit="validate(signUp); return false">
-                <div>
-                    <label for="user name">User name</label>
-                    <span>Min <?= _USER_NAME_MIN_LEN ?> and max <?= _USER_NAME_MAX_LEN ?> characters</span>
-                    <input 
-                        type="text"
-                        name="user_name"
-                        placeholder="User name"
-                        data-validate="str">
-                </div>
-                <div>
-                    <label for="user email">Email</label>
-                    <input 
-                        type="text"
-                        name="user_email"
-                        placeholder="Email"
-                        data-validate="email"
-                        onblur="isEmailAvailable()"
-                        onfocus="clearInput()">
-                    <span class="error">Email is already in use</span>
-                </div>
-                <div>
-                    <label for="user password">Password</label>
-                    <span>Minimum <?= _USER_PASSWORD_MIN_LEN ?> characters)</span>   
-                    <input 
-                        type="password"
-                        name="user_password"
-                        placeholder="Password"
-                        data-validate="str">
-                </div>
-                <div>
-                    <label for="user_password_confirm">Confirm password</label>
-                    <input 
-                        type="password"
-                        name="user_password_confirm"
-                        placeholder="Confirm password"
-                        data-validate="match"
-                        data-match-name="user_password">
-                </div>
-                <button class="mt1">Sign up</button>
-                <p class="mt1">Already have an account? <a href="#" onclick="toggleSignUp()">Sign in!</a></p>
-            </form>
-        </div>
-    </div>
+    <?php
+    include_once __DIR__.'/comp-signin-modal.php';
+    ?>
+    

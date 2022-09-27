@@ -22,14 +22,22 @@ require_once __DIR__.'/comp_header.php';
 
     <h2 class="mt2">Explore by interest in Vienna</h2>
     <div class="card3">
-            <div class="card2-bottom mt1">
+            <div class="card3-bottom mt1">
                 <img src="/images/tours.jpg" alt="">
                 <h5>Tours</h5>
             </div>
-            <div class="card2-bottom mt1">
+            <div class="card3-bottom mt1">
                 <img src="/images/events.jpg" alt="">
                 <div class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="JRE_-arrow-svg" role="img" cleanup=""><path d="M79.999 160a5 5 0 0 1-3.698-8.363L123.243 100L76.3 48.363a5 5 0 0 1 7.399-6.727l50 55a5.002 5.002 0 0 1 0 6.727l-50 55a4.986 4.986 0 0 1-3.7 1.637z"></path></svg></div>
                 <h5>Events & attractions</h5>
+            </div>
+            <div class="card3-bottom mt1">
+                <img src="/images/outdoors.jpg" alt="">
+                <h5>Outdoor Activities</h5>
+            </div>
+            <div class="card3-bottom mt1">
+                <img src="/images/food.jpg" alt="">
+                <h5>Food & drinks</h5>
             </div>
     </div>
 
