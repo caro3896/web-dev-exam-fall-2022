@@ -49,7 +49,8 @@
 
     #search_flight,
     #stays,
-    #cars {
+    #cars,
+    #holidays {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -58,7 +59,8 @@
 
     #form_container,
     #stay,
-    #car
+    #car,
+    #holiday
     {
         /* max-width: 70vw; */
         flex-direction: row;
@@ -74,12 +76,16 @@
         gap: 1rem;
     }
 
-    #things button {
+    #things button{
         margin: 0;
         width: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #holidays button {
+        width: 3rem;
     }
 
     /* #from-container,

@@ -149,6 +149,10 @@ div#menu a {
     padding: 0.5rem 0;
 }
 
+#links a {
+    margin-bottom: 0.5rem;
+}
+
 #trips {
     padding: 0.5rem 0;
 }
@@ -175,13 +179,20 @@ a.focus svg{
     flex-direction: column;
 }
 
+#holiday {
+    gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
 #stay input,
 #car input,
-#things input {
+#things input,
+#holiday input {
     border-radius: 0.3rem;
     background-color: #f3f0f5;
     border: 1px solid #f6f6f6;
-    padding: 0 2rem;
+    padding: 0 3rem;
     width: 100%;
     height: 3rem;
     background-repeat: no-repeat;
@@ -209,12 +220,20 @@ a.focus svg{
     background-image: url('/images/icons/camera.svg');
 }
 
+.holiday-to {
+    background-image: url('/images/icons/holiday.svg');
+}
+
+.holiday-from {
+    background-image: url('/images/icons/airplane.svg');
+}
+
 #search_flight #from-container #from-input,
 #search_flight #to-container #to-input {
     border-radius: 0.3rem;
     background-color: #f3f0f5;
     border: 1px solid #f3f0f5;
-    padding: 0 2rem;
+    padding: 0 3rem;
     width: 100%;
     background-image: url('/images/icons/airplane.svg');
     background-repeat: no-repeat;
@@ -262,6 +281,25 @@ a.focus svg{
     border-radius: 0.3rem;
     width: 80%;
     margin-top: 0.3rem;
+}
+
+#holidays button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background: linear-gradient(135deg,#de1666 0%,#73146f 100%);
+    border: none;
+    border-radius: 0.3rem;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    margin: 1rem auto;
+    cursor: pointer;
+}
+
+#holidays button svg {
+    fill: white;
 }
 
 #from-results .from-results-container,

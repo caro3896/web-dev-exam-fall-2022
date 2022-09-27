@@ -6,18 +6,12 @@ RewriteRule ^$                          view_index.php                  [NC,L]
 RewriteRule ^login                      /?show_login_modal=yes.php      [NC,L]            
 RewriteRule ^signup$                    view_signup.php                 [NC,L]
 ReWriteRule ^admin$                     view_admin.php                  [NC,L]
-# RewriteRule ^admin/(\d+).php$         view_admin.php?id=$1            [NC,L]
-# ReWriteRule ^flights$                 view_flights.php                [NC,L]
 ReWriteRule ^stays$                     view_stays.php                  [NC,L]
 ReWriteRule ^cars$                      view_cars.php                   [NC,L]
 ReWriteRule ^things-to-do$              view_things_to_do.php           [NC,L]
 ReWriteRule ^holidays$                  view_holidays.php               [NC,L]
 ReWriteRule ^explore$                   view_explore.php                [NC,L]
 ReWriteRule ^trips$                     view_trips.php                  [NC,L]
-
-
-#RewriteRule ^search/(\w+)/(\w+)$       view_search.php?from=$1&to=$2   [NC,L]
-#RewriteRule ^search/(\w+)/(\w+)/(\d{1,2})/(\d{1,2})$    view_search.php?from=$1&to=$2&day=$3&month=$4   [NC,L]
 
 # Bridge
 RewriteRule ^bridge-logout$             bridge-logout.php               [NC,L]
