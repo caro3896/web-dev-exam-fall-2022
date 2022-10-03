@@ -13,12 +13,6 @@ ReWriteRule ^holidays$                  view_holidays.php               [NC,L]
 ReWriteRule ^explore$                   view_explore.php                [NC,L]
 ReWriteRule ^trips$                     view_trips.php                  [NC,L]
 
-#RewriteRule ^([^\.]+)$                 $1.php                          [NC,L]
-#RewriteRule ^([^\.]+)/(\w+)$           $1.php?lang=$2                  [NC,L]
-#RewriteRule ^stays/(\w+)$              view_stays.php?lang=$1          [NC,L]
-#RewriteRule ^([^\.]+)/da$              $1.php?lang=da                  [NC,L]
-#omskriv url/da til $1?lang=$2.php
-
 # Bridge
 RewriteRule ^bridge-logout$             bridge-logout.php               [NC,L]
 RewriteRule ^bridge-login$              bridge-login.php                [NC,L]

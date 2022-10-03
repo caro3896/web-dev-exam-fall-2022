@@ -1,6 +1,9 @@
 <?php
 
 ini_set('display_errors',1);
+require_once __DIR__.'/_x.php';
+
+_validate_from_city_name();
 // Always start with a try catch in af PHP function
 
 // Tell the server to try this
@@ -9,7 +12,7 @@ try{
     $from_city = $_GET['from_city_name'] ?? 0;
     // Connection to the database (put in a variable)
     $db = new PDO('sqlite:'.__DIR__.'/momondo.db');
-    // Searches for the flight
+    // Searches for the city
     $q = $db->prepare('SELECT DISTINCT from_city_name, from_city_airport_name, from_city_img FROM flights WHERE from_city_name LIKE :from_city');
     $q->bindValue(':from_city', '%'.$from_city.'%');
     // Run the previous statements
@@ -18,33 +21,12 @@ try{
     //                        (associative array)
     $flights = $q->fetchAll(PDO::FETCH_ASSOC);
 
-    // If from_city_name is empty
-    if ( ! isset($_GET['from_city_name']) ){
-        http_response_code(400);
-        echo json_encode(['Info'=>'Missing from_city_name variable']);
-        exit();
-    }
-
-    // If from_city_name too short
-    if( strlen($from_city) < 1 ){
-        http_response_code(400);
-        echo json_encode(['Info'=>'City name is too short.']);
-        exit();
-    }
-
-    // If from_city_name is too long
-    if( strlen($from_city) > 20 ){
-        http_response_code(400);
-        echo json_encode(['Info'=>'City name is too long.']);
-        exit();
-    }
     echo json_encode($flights);
     exit();
 }
 
 // If it fails, catch it with this
 catch(Exception $ex){
-    //echo $ex;
     http_response_code(400);
     echo json_encode(['Info:'=>'Sorry, error']);
 }

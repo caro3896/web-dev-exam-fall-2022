@@ -4,7 +4,7 @@ require_once __DIR__.'/comp_header.php';
 ?>
 
 <main>
-    <h1>Search and compare package holidays</h1>
+    <h1><?= $dictionary[$lang.'_holidays_h1'] ?></h1>
 
     <form id="holidays" class="mt2" onsubmit="return false">
         <div id="holiday">

@@ -4,7 +4,7 @@ require_once __DIR__.'/comp_header.php';
 ?>
 
 <main>
-    <h1>Hire a car with free cancellation - search now. </h1>
+    <h1><?= $dictionary[$lang.'_cars_h1']?></h1>
 
     <form id="cars" class="mt2" onsubmit="return false">
         <div id="car">

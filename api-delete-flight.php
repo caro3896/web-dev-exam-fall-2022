@@ -2,8 +2,6 @@
 ini_set('display_errors',1);
 
 // Validate the flight ID
-// Simple ID: 1,2,3,4 - meaning no letters, no negative numbers 
-
 if( ! isset($_POST['flight_id']) ){
     http_response_code(400);
     echo json_encode(['info'=>'flight_id missing']);
@@ -23,8 +21,6 @@ try{
     $q = $db->prepare('DELETE FROM flights WHERE flight_id = :id');
     $q->bindValue(':id', $_POST['flight_id']);
     $q->execute();
-    // Success
-    // echo "flight_id {$_POST['flight_id']}";
     echo json_encode(['info'=>'flight delete', 'flight_id'=>$_POST['flight_id']]);
     exit();
   }

@@ -15,7 +15,6 @@ function toggleMenu(){
 // Toggle sign in modal
 
 function toggleSignIn(){
-  // console.log("sign in");
   const signInModal = document.getElementById('sign-in-modal');
   if(signInModal.classList.contains('show')){
     signInModal.classList.remove('show');
@@ -36,7 +35,6 @@ function toggleSignUp(){
     signUpForm.classList.remove('hide');
     signInForm.classList.add('hide'); 
   }else{
-    console.log("vis sign in modal")
     signUpForm.classList.add('hide');
     signInForm.classList.remove('hide'); 
   }
@@ -46,7 +44,6 @@ function toggleSignUp(){
 // Search flight from
 
 function showFromResults(){
-  // console.log("hello");
   const theInput = document.querySelector("#from-input").value;
   if( theInput.length > 0 ){
       document.querySelector("#from-results").style.display = "block";
@@ -66,7 +63,6 @@ async function getCitiesFrom(){
   const searchFor = document.querySelector("#from-input").value;
   const connection = await fetch('api-get-cities-from?from_city_name='+searchFor);
   const flights = await connection.json();
-  // console.log(flights);
 
   let allFlights = "";
 
@@ -80,9 +76,7 @@ async function getCitiesFrom(){
     </div>`;
 
   flights.forEach( flight => {
-      // console.log(flight);
-      let divFlight = originalFlightBlueprint;
-      console.log(flight.from_city_img);
+      let divFlight = originalFlightBlueprint;;
       divFlight = divFlight.replace('#from-city-image#', `images/city_thumbnails/${flight.from_city_img}`);
       divFlight = divFlight.replace('#from_city#', flight.from_city_name);
       divFlight = divFlight.replace('#from_airport#', flight.from_city_airport_name);
@@ -161,10 +155,8 @@ async function getFlights(){
   const toCitySearch = document.querySelector("#to-input").value;
   const connection = await fetch('api-search-flights?from_city_name='+fromCitySearch+'&to_city_name='+toCitySearch);
   const flights = await connection.json();
-  console.log(flights.length);
 
   if ( flights.length == 0 ){
-    console.log("no flights");
     const noFlights = `
       <div class="no-flights">
         <p>Sorry, no flights matches your search.</p>
@@ -199,7 +191,6 @@ async function getFlights(){
     </div>
   `
   flights.forEach( flight => {
-      console.log(flight);
       let divFlight = originalFlightBlueprint;
       divFlight = divFlight.replace('#fligth-company#', `images/${flight.airline}.png`);
       divFlight = divFlight.replace('#departure_airport#', flight.from_city_airport_short);
@@ -219,7 +210,6 @@ async function getFlights(){
 // Sign up
 
 async function signUp(){
-  console.log("signup");
   const theForm = document.querySelector("#sign-up-form");
   const connection = await fetch('api-signup', {
       method: "POST",
@@ -262,8 +252,6 @@ async function deleteFlight(flight){
 // Upload image
 async function uploadImage(){
   const form = document.querySelector("#upload-image");
-  // console.log(document.querySelector("#fileToUpload"));
-  // document.querySelector("#fileToUpload").value = '';
   const connection = await fetch("api-upload-photo", {
       method: "POST",
       body: new FormData(form)

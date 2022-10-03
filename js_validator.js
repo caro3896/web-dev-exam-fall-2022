@@ -20,17 +20,17 @@ function validate(callback) {
             element.style.backgroundColor = validate_error;
           }
           break;
-        case "regex":
-          var regex = new RegExp(element.getAttribute("data-regex"));
-          // console.log(regex);
-          // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
-          if (!regex.test(element.value)) {
-            console.log(element.value);
-            console.log("regex error");
-            element.classList.add("validate_error");
-            element.style.backgroundColor = validate_error;
-          }
-          break;
+        // case "regex":
+        //   var regex = new RegExp(element.getAttribute("data-regex"));
+        //   // console.log(regex);
+        //   // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        //   if (!regex.test(element.value)) {
+        //     console.log(element.value);
+        //     console.log("regex error");
+        //     element.classList.add("validate_error");
+        //     element.style.backgroundColor = validate_error;
+        //   }
+        //   break;
         case "match":
           if (element.value != document.querySelector(`[name='${element.getAttribute("data-match-name")}']`, form).value) {
             element.classList.add("validate_error");

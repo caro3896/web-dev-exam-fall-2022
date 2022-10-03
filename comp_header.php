@@ -54,7 +54,7 @@ session_start();
         </div>     
     </header>
 
-    <div id="menu" onclick="toggleMenu()" onmouseover="toggleMenu()">
+    <div id="menu" onclick="toggleMenu()">
         <nav class="left_nav">
             <div id="signup">
                 <?php

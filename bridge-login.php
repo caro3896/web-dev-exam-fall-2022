@@ -2,7 +2,7 @@
 $_correct_email = 'a@a.com';
 $_correct_password = 'password';
 
-// Validate
+// Validate - check if it's an actual email
 if( ! filter_var( $_POST['email'], FILTER_VALIDATE_EMAIL )){
     header('Location: login');
     exit();
@@ -20,6 +20,7 @@ if( $_correct_password != $_POST['password'] ){
     exit();
 }
 
+// Start a session 
 session_start();
 $_SESSION['user_name'] = 'Caroline';
 header("Location: admin");
